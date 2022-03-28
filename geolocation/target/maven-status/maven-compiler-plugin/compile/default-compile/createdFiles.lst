@@ -1,0 +1,4 @@
+com\hilton\geolocation\GeoLocationApplication.class
+com\hilton\geolocation\health\AppHealthCheck.class
+com\hilton\geolocation\client\RESTCientController.class
+com\hilton\geolocation\resources\LocationDetails.class

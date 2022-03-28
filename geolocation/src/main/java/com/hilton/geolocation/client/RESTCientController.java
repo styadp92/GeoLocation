@@ -38,7 +38,17 @@ public class RESTCientController {
 
 		LocationDetails ld = resp.readEntity(LocationDetails.class);
 
-		// String s = resp.readEntity(String.class);
+		int statusCode = resp.getStatus();
+		String msg = ld.message;
+		String status = ld.status;
+		
+		if(statusCode == 200 && status.contains("success")) {
+			LOGGER.info("Successfully retrieved IP details..");
+		}
+		else {
+			LOGGER.info("Error retrieving info with IP : " + ipAdr + " - " + msg);
+		}
+		
 
 		return ld;
 
